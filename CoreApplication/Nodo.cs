@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreApplication
 {
-    class Nodo
+    public class Nodo
     {
         protected Object dato;
         protected Nodo izdo;

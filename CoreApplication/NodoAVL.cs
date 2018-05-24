@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreApplication
 {
-    class NodoAvl : Nodo
+    public class NodoAvl : Nodo
     {
         public int fe;
         public NodoAvl(Object valor):base(valor)

@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArbolAVL.cs" />
+    <Compile Include="AVLTree.cs" />
     <Compile Include="Comparador.cs" />
     <Compile Include="Logical.cs" />
     <Compile Include="Nodo.cs" />

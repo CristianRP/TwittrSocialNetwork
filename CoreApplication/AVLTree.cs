@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CoreApplication
 {
-    class ArbolAVL
+    public class AVLTree
     {
-        protected NodoAvl raiz;
+        public NodoAvl raiz;
 
-        public ArbolAVL()
+        public AVLTree()
         {
             raiz = null;
         }
@@ -295,27 +295,27 @@ namespace CoreApplication
         
         private NodoAvl equilibrar2(NodoAvl n, Logical cambiaAltura)
         {
-        NodoAvl n1;
-        switch (n.fe)
-        {
-        case -1: // Se aplica un tipo de rotación izquierda
-        n1 = (NodoAvl)n.subarbolIzdo();
-        if (n1.fe <= 0)
-        {
-        if (n1.fe == 0)
-        cambiaAltura.setLogical(false);
-        n = rotacionII(n, n1);
-        }
-        else
-        n = rotacionID(n,n1);
-        break;
-        case 0 : n.fe = -1;
-        cambiaAltura.setLogical(false);
-        break;
-        case +1 : n.fe = 0;
-        break;
-        }
-        return n;
+            NodoAvl n1;
+            switch (n.fe)
+            {
+                case -1: // Se aplica un tipo de rotación izquierda
+                n1 = (NodoAvl)n.subarbolIzdo();
+                if (n1.fe <= 0)
+                {
+                    if (n1.fe == 0)
+                    cambiaAltura.setLogical(false);
+                    n = rotacionII(n, n1);
+                }
+                else
+                    n = rotacionID(n,n1);
+                    break;
+                    case 0 : n.fe = -1;
+                    cambiaAltura.setLogical(false);
+                    break;
+                    case +1 : n.fe = 0;
+                    break;
+            }
+            return n;
         }
         
         /////////////////////////////////
@@ -323,7 +323,7 @@ namespace CoreApplication
         /// Comprueba el estatus del árbol
         /// </summary>
         /// <returns></returns>
-         bool esVacio()
+        public bool esVacio()
         {
             return raiz == null;
         }
@@ -373,5 +373,7 @@ namespace CoreApplication
                 return 1 + numNodos(raiz.subarbolIzdo()) +
                 numNodos(raiz.subarbolDcho());
         }
+
     }
+
 }

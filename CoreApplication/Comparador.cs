@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreApplication
 {
-    interface Comparador
+    public interface Comparador
     {
         bool igualQue(Object q);
         bool menorQue(Object q);

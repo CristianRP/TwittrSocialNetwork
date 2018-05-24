@@ -7,13 +7,17 @@
           <div class="card-body">
               <div class="form-group">
                 <label for="formGroupExampleInput">Email</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email">
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email" ToolTip="Email" AutoCompleteType="Email" type="email"/>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
+                                CssClass="text-danger" ErrorMessage="El campo de email de usuario es obligatorio." />
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput2">Password</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+                <label for="formGroupExampleInput">Password</label>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Password" ToolTip="Password" AutoCompleteType="None" type="password"/>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
+                                CssClass="text-danger" ErrorMessage="El campo de password de usuario es obligatorio." />
               </div>
-              <button type="submit" class="btn btn-primary">Log in</button>
+              <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary float-right" Text="Iniciar sesion" OnClick="btnLogin_Click"  />
           </div>
       </div>
 </asp:Content>
